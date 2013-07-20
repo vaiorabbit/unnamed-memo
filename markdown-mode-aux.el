@@ -15,9 +15,14 @@
 ;; [OSX] S-<tab> が C-y (yank) になる問題への対策
 ;; Ref.: http://groups.google.com/group/gnu.emacs.help/browse_thread/thread/094d5a87076987ec?pli=1
 ;;       Emacs 23 for OSX 固有の問題?
-(define-key markdown-mode-map (kbd "<S-tab>") 'markdown-shifttab) ; org-modeと同様のグローバルトグルに設定されるように上書き
+;; [2013-07-20] markdown-mode v2.0 であればデフォルトで設定されるようになったので不要
+; (define-key markdown-mode-map (kbd "<S-tab>") 'markdown-shifttab) ; org-modeと同様のグローバルトグルに設定されるように上書き
 
 ;; 箇条書き入力支援
+;;
+;; [2013-07-20] markdown-mode v2.0 では不要になった。このバージョンからは
+;; 'markdown-insert-list-item' が導入され、デフォルトで 'M-<return>' にマップされている。
+;;
 ;; Ref.: Emacs Lisp Idioms (for writing interactive commands) - Get Current Word or Line
 ;;       http://xahlee.org/emacs/elisp_idioms.html
 ;;       Inconsistent Behavior for 'line
